@@ -6,6 +6,7 @@ export default {
     orders: 'Orders',
     finance: 'Finance',
     demandForecast: 'Demand Forecast',
+    restocking: 'Restocking',
     companyName: 'Catalyst Components',
     subtitle: 'Inventory Management System'
   },
@@ -103,6 +104,22 @@ export default {
 
   // Orders
   orders: {
+    submittedOrders: {
+      title: 'Submitted Orders ({count})',
+      empty: 'No restocking orders yet.',
+      goToRestocking: 'Place one from the Restocking tab',
+      loadError: 'Could not load submitted orders',
+      leadTimeDays: '{days} days',
+      table: {
+        orderNumber: 'Order Number',
+        items: 'Items',
+        status: 'Status',
+        submitted: 'Submitted',
+        leadTime: 'Lead Time',
+        expectedDelivery: 'Expected Delivery',
+        total: 'Total'
+      }
+    },
     title: 'Orders',
     description: 'View and manage customer orders',
     allOrders: 'All Orders',
@@ -198,12 +215,51 @@ export default {
     allMonths: 'All Months'
   },
 
+  // Restocking
+  restocking: {
+    title: 'Restocking',
+    description: 'Set a budget and restock the items with the strongest forecast demand',
+    budgetLabel: 'Available budget',
+    stats: {
+      budget: 'Budget',
+      orderTotal: 'Order Total',
+      remaining: 'Remaining',
+      leadTime: 'Est. Lead Time'
+    },
+    recommendedItems: 'Recommended Items',
+    notIncluded: 'Not Included',
+    noRecommendedItems: 'Raise the budget to see recommended items.',
+    allItemsIncluded: 'Every forecast item fits in this budget.',
+    days: '{days} days',
+    ofTotal: 'of {total}',
+    table: {
+      item: 'Item',
+      sku: 'SKU',
+      trend: 'Trend',
+      qty: 'Qty',
+      unitCost: 'Unit Cost',
+      lineTotal: 'Line Total',
+      leadTime: 'Lead Time',
+      reason: 'Reason'
+    },
+    reasons: {
+      decliningDemand: 'Demand is declining',
+      noDemandGap: 'No additional demand forecast',
+      overBudget: 'Over budget ({total} units suggested)'
+    },
+    placeOrder: 'Place Order',
+    submitting: 'Placing order...',
+    successMessage: 'Order {orderNumber} placed.',
+    viewOrders: 'View in Orders'
+  },
+
   // Statuses
   status: {
     delivered: 'Delivered',
     shipped: 'Shipped',
     processing: 'Processing',
     backordered: 'Backordered',
+    submitted: 'Submitted',
     inStock: 'In Stock',
     lowStock: 'Low Stock',
     adequate: 'Adequate'
